@@ -10,5 +10,5 @@ def my_prediction(id):
     dummy = np.array(id)
     dummyT = dummy.reshape(-1,1)
     dummy_str = dummy.tolist()
-    prediction = my_model.predict(dummyT)
+    prediction = np.exp(my_model.predict(dummyT))
     return str(prediction[0])
